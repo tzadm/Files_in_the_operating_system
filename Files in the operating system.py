@@ -1,8 +1,6 @@
-import os
-import time
-
-
 def pywalker(path):
+    import os
+    import time
     for root, dirs, files in os.walk(path):
         for file_ in files:
             filepath = os.path.join(root, file_)
@@ -14,3 +12,4 @@ def pywalker(path):
             print(f'\n Обнаружен файл: {file_}\n Путь: {filepath}'
                   f'\n Размер: {filesize} байт\n Время изменения: {formatted_time}'
                   f'\n Родительская директория: {parent_dir_}\n')
+
